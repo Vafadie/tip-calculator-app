@@ -20,6 +20,7 @@ p{
 
 input{
     padding-left: 25px;
+    padding-right: 25px;
     width: 100%;
     height: 45px;
 
@@ -31,7 +32,7 @@ input{
     border-style: none;
     background-position-y:center;
     padding-block-start: 5px;
-
+    text-align: right;
 }
 
 input[type=text]:focus {
