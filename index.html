@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
-
+  <script src="./tip_handling.js"></script>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -29,7 +29,7 @@
         
         <div class="content" id="content-smaller">
           <p id="dark">Bill</p>
-          <input id="dollar"></input>
+          <input onchange="setPercentage()" class="normal" id="dollar"></input>
         </div>
         
         <div class="content" id="content-bigger">
@@ -38,25 +38,29 @@
 
           <div class="tips">
 
-            <div class="tip">5%</div>
-            <div class="tip">10%</div>
-            <div class="tip">15%</div>
+            <div onclick="setPercentage(5)" class="tip">5%</div>
+            <div onclick="setPercentage(10)" class="tip">10%</div>
+            <div onclick="setPercentage(15)" class="tip">15%</div>
 
           </div>
 
           <div class="tips">
 
-            <div class="tip">25%</div>
-            <div class="tip">50%</div>
-            <div class="tip" id="custom-tip">Custom</div>
-          
+            <div onclick="setPercentage(25)" class="tip">25%</div>
+            <div onclick="setPercentage(50)" class="tip">50%</div>
+            <input onchange="setPercentage()"
+            class="custom"
+            id="customtip"
+            placeholder="Custom"
+            ></input>
+
           </div>
         </div>
         
         <div class="content" id="content-smaller">
 
           <p id="dark">Number of People</p>
-          <input id="person"></input>
+          <input onchange="setPercentage()" class="normal" id="person"></input>
 
         </div>
         
@@ -76,7 +80,7 @@
             <p id="small">/ person</p> 
           </div>
           <div class="text-box">
-            <p id="big-numbers">$0.00</p>
+            <p id="big-numbers" name="number1">$0.00</p>
           </div>
 
         </div>
@@ -90,14 +94,14 @@
           </div>
 
           <div class="text-box">
-            <p id="big-numbers">$0.00</p>
+            <p id="big-numbers" name="number1">$0.00</p>
           </div>
 
 
         </div>
 
         <div class="text-box-wrapper" style="height:50%;">
-          <div class="reset-button">RESET</div> 
+          <div onclick="reset()" id="reload" class="reset-button">RESET</div> 
         </div>
 
       </div>
@@ -115,4 +119,5 @@
   
 
 </body>
+
 </html>
