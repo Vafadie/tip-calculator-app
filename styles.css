@@ -135,7 +135,6 @@ input[type=text]:focus {
 
     padding: 35px 50px 20px 50px;
     float: left;
-    display: flexbox;
 
     width: 50%;
     height: 100%;
